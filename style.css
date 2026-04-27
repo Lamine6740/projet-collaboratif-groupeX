@@ -38,6 +38,16 @@ button {
     margin-top: 10px;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+img {
+    display: block;
+    margin-bottom: 10px;
+}
+
 button:hover {
     background: gray;
 }
