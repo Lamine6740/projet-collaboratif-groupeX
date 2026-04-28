@@ -12,3 +12,14 @@ app.get('/hello', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Serveur lancé sur http://localhost:${PORT}`);
 });
+let tasks = [];
+
+app.get('/tasks', (req, res) => {
+  res.json(tasks);
+});
+
+app.post('/tasks', (req, res) => {
+  const newTask = req.body;
+  tasks.push(newTask);
+  res.json({ message: 'Tâche ajoutée', task: newTask });
+});
